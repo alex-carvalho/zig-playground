@@ -1,0 +1,11 @@
+{
+    "name": "Zig Codespace",
+    "dockerFile": "Dockerfile",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+      				"ziglang.vscode-zig"
+      			]
+        }
+    }
+}
