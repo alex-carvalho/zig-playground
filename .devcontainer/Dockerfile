@@ -14,5 +14,3 @@ RUN curl -o zig.tar.xz https://ziglang.org/download/$ZIG_VERSION/zig-linux-x86_6
     
 
 RUN ln -s /opt/zig-linux-x86_64-$ZIG_VERSION/zig /usr/local/bin/zig
-
-USER user
