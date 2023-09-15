@@ -1,6 +1,5 @@
-FROM ubuntu:22.04
+FROM ubuntu:23.10
 
 COPY . .
 
 RUN bash setup.sh
-USER user
