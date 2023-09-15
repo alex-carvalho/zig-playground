@@ -7,7 +7,11 @@ RUN apt-get update && apt-get install -y curl git jq xz
 
 ARG ZIG_VERSION=0.11.0
 
-RUN curl https://ziglang.org/download/$ZIG_VERSION/zig-linux-x86_64-$ZIG_VERSION.tar.xz  -O && \
-    tar xf zig-linux-x86_64-$ZIG_VERSION.tar.xz && \
-    mv zig-linux-x86_64-$ZIG_VERSION.tar.xz local/
+RUN curl -o zig.tar.xz https://ziglang.org/download/$ZIG_VERSION/zig-linux-x86_64-$ZIG_VERSION.tar.xz && \
+    tar xf zig.tar.xz && \
+    rm zig.tar.xz && \
+    mv zig-linux-x86_64-$ZIG_VERSION /opt/
+
+ENV PATH "/opt/zig-linux-x86_64-$ZIG_VERSION/zig:${PATH}"
+
 
