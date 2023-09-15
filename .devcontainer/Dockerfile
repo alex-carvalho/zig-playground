@@ -3,7 +3,7 @@ FROM ubuntu:23.10
 COPY . .
 
 
-RUN apt-get update && apt-get install -y curl git jq xz
+RUN apt-get update && apt-get install -y curl git jq xz-utils
 
 ARG ZIG_VERSION=0.11.0
 
