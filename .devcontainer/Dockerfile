@@ -11,6 +11,6 @@ RUN curl -o zig.tar.xz https://ziglang.org/download/$ZIG_VERSION/zig-linux-x86_6
     tar xf zig.tar.xz && \
     rm zig.tar.xz && \
     mv zig-linux-x86_64-$ZIG_VERSION /opt/ && \
-    echo "export PATH=$PATH:/opt/zig-linux-x86_64-$ZIG_VERSION/zig" >> ~/.bashrc
+    ln -s /opt/zig-linux-x86_64-$ZIG_VERSION/zig /usr/local/bin/zig
 
 
